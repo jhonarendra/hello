@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var scrollTop = $(window).scrollTop();
 	var windowHeight = $(window).height();
 
-	var showPoint = scrollTop + windowHeight - 100;
+	var showPoint = scrollTop + windowHeight - 50;
 
 	if(showPoint>offsetTop){
 		$(".jo-show").addClass("animated bounceIn");
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 			var delay = '0.'+i*2+'s';
 
-			var showPoint = scrollTop + windowHeight - 100;
+			var showPoint = scrollTop + windowHeight - 50;
 
 			if(showPoint>offsetTop){
 				$(this).addClass("animated bounceIn");
@@ -55,6 +55,10 @@ $(document).ready(function(){
 	}, function(){
 	  $(".jo-project-wrapper").stop()
 	});
+
+	$("#jo-toggle").click(function(){
+		$(".jo-pop-menu-wrapper").toggleClass("active");
+	})
 });
 
 
