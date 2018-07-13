@@ -331,6 +331,7 @@ article, aside, footer, header, hgroup, main, nav, section{
 	background: #fafafa;
 }
 .jo-about-content .jo-about-img{
+	border-radius: 50%;
 	box-shadow: 0 30px 50px 0 rgba(34,43,55,.4);
 }
 .jo-about-content .jo-section-title{
@@ -598,6 +599,7 @@ position: absolute;
 	display: block;
 }
 .jo-pop-menu-top{
+	position: relative;
 	background: #fff;
 	width: 100%;
 	border-radius: 7px 7px 0 0;
@@ -632,6 +634,19 @@ background: #eee;
 	position: absolute;
 	top:10px;
 }
+.jo-pop-menu i.icon-close{
+	top: 20px;
+	right: 20px;
+	font-size: 24px;
+	z-index: 99;
+	cursor: pointer;
+}
+.jo-web-menu{
+	display: block;
+}
+.jo-mobile-menu{
+	display: none;
+}
 @media screen and (max-width: 1024px){
 	.jo-wrapper{
 		width:100%;
@@ -644,6 +659,13 @@ background: #eee;
 @media screen and (max-width: 768px){
 	.content__container {
 		width:100%;
+	}
+
+	.jo-mobile-menu{
+		display: block;
+	}
+	.jo-web-menu{
+		display: none;
 	}
 	.content__container {
 		font-size: 32px;
@@ -686,6 +708,7 @@ background: #eee;
 		height: 800px;
 	}
 	.jo-head-content h4{
+		margin-top: 50px;
 		text-align: center;
 	}
 	.content__container {

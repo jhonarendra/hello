@@ -57,7 +57,12 @@ $(document).ready(function(){
 	});
 
 	$("#jo-toggle").click(function(){
-		$(".jo-pop-menu-wrapper").toggleClass("active");
+		$(".jo-pop-menu-wrapper").removeClass("bounceOutDown");
+		$(".jo-pop-menu-wrapper").addClass("active animated bounceInUp");
+	})
+	$(".jo-pop-menu-wrapper .icon-close").click(function(){
+		$(".jo-pop-menu-wrapper").removeClass("active bounceInUp");
+		$(".jo-pop-menu-wrapper").addClass("active animated bounceOutDown");
 	})
 });
 
