@@ -25,13 +25,13 @@ $(document).ready(function(){
 			var scrollTop = $(window).scrollTop();
 			var windowHeight = $(window).height();
 
-			var delay = '0.'+i*2+'s';
+			// var delay = '0.'+i*2+'s';
 
 			var showPoint = scrollTop + windowHeight - 50;
 
 			if(showPoint>offsetTop){
 				$(this).addClass("animated bounceIn");
-				$(this).css("animation-delay", delay);
+				// $(this).css("animation-delay", delay);
 				$(this).removeClass("jo-hide");
 			}
 		});
