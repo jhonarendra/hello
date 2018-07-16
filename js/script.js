@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$(".jo-show").addClass("jo-hide");
 	var offsetTop = $(".jo-show").offset().top;
 
@@ -37,23 +38,47 @@ $(document).ready(function(){
 		});
 	});
 
-	var width = 0;
-	$(".jo-project").each(function(i){
-	  width += $(this).width()
+	var width1 = 0;
+	$("#jo-project-wrapper1 .jo-project").each(function(i){
+	  width1 += $(this).width()
 	});
-	$("#left").hover(function(){
-	  $(".jo-project-wrapper").animate({
+	$("#left1").hover(function(){
+	  $("#jo-project-wrapper1").animate({
 	    scrollLeft: -1000
 	  }, 5000, 'linear');
 	}, function(){
-	  $(".jo-project-wrapper").stop()
+	  $("#jo-project-wrapper1").stop()
 	});
-	$("#right").hover(function(){
-	  $(".jo-project-wrapper").animate({
-	    scrollLeft: width
+	$("#right1").hover(function(){
+	  $("#jo-project-wrapper1").animate({
+	    scrollLeft: width1
 	  }, 5000, 'linear');
 	}, function(){
-	  $(".jo-project-wrapper").stop()
+	  $("#jo-project-wrapper1").stop()
+	});
+
+	var width2 = 0;
+	$("#jo-project-wrapper2 .jo-project").each(function(i){
+	  width2 += $(this).width()
+	});
+
+	$("#jo-project-wrapper2").animate({
+	  scrollLeft: width2
+	}, 5000, 'linear');
+	
+	$("#left2").hover(function(){
+	  $("#jo-project-wrapper2").animate({
+	    scrollLeft: -1000
+	  }, 5000, 'linear');
+	}, function(){
+	  $("#jo-project-wrapper2").stop()
+	});
+	$("#right2").hover(function(){
+	  $("#jo-project-wrapper2").animate({
+	    scrollLeft: width2
+	  }, 5000, 'linear');
+	}, function(){
+	  $("#jo-project-wrapper2").stop()
 	});
 
 	$("#jo-toggle").click(function(){

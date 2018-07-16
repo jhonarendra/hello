@@ -140,8 +140,19 @@ article, aside, footer, header, hgroup, main, nav, section{
 #jo-header{
 	padding:40px 0;
 }
+#jo-header #jo-logo{
+	transform: scale(.2);
+	position: absolute;
+	top: -45px;
+	left: -40px;
+	display: none;
+}
+#jo-header #jo-logo div:nth-child(2) {
+	background: #000;
+}
 .jo-header-inner, .jo-header-menu{
 	float:left;
+	position: relative;
 	width: 50%
 }
 .jo-header-inner img{
@@ -404,9 +415,6 @@ article, aside, footer, header, hgroup, main, nav, section{
 	cursor: pointer;
 	transition: all 0.5s;
 }
-.jo-skill-main .jo-col4:hover{
-	box-shadow: 0 30px 50px 0 rgba(34,43,55,.4);
-}
 .jo-skill-content .jo-section-title{
 	color:#fff;
 }
@@ -429,14 +437,14 @@ article, aside, footer, header, hgroup, main, nav, section{
 
 #jo-project{
 	position: relative;
-	height: 800px; 
+	height: 1200px; 
 	background: #eee;
 }
 
 .jo-bg-project{
 	position: absolute;
 	width: 100%;
-	height:600px;
+	height:1000px;
 }
 .jo-bg-project :first-child, .jo-bg-project :nth-child(3){
 	position: absolute;
@@ -487,9 +495,8 @@ article, aside, footer, header, hgroup, main, nav, section{
   flex: 0 0 auto;
   margin-right: 50px;
   cursor:pointer;
-  transition: all 0.2s
 }
-.jo-project:hover{
+.jo-project img:hover{
 	margin-top: 5px;
 	box-shadow: none;
 }
@@ -497,20 +504,28 @@ article, aside, footer, header, hgroup, main, nav, section{
 	height:300px;
 	border-radius: 7px;
 	box-shadow: 0 30px 50px 0 rgba(34,43,55,.4);
+  transition: all 0.2s
 }
-.jo-btn-left, .jo-btn-right{
+#left1.jo-btn-left, #right1.jo-btn-right, #left2.jo-btn-left, #right2.jo-btn-right{
 	background: transparent;/*linear-gradient(to right, #aaa, transparent)*/;
 	position: absolute;
 	z-index: 4;
 	width: 100px;
-	height: 400px;
+	height: 300px;
 }
-.jo-btn-left{
-	top: 230px;
+#left1.jo-btn-left{
+	top: 240px;
 }
-.jo-btn-right{
+#right1.jo-btn-right{
 	right: 0;
-	top: 235px;
+	top: 240px;
+}
+#left2.jo-btn-left{
+	top: 590px;
+}
+#right2.jo-btn-right{
+	right: 0;
+	top: 590px;
 }
 #jo-post{
 	position: relative;
@@ -578,12 +593,53 @@ article, aside, footer, header, hgroup, main, nav, section{
 	width: 100%;
 	height: 600px;
 	background: #eee;
+	overflow: hidden;
+}
+.jo-social-media{
+	    width: 500px;
+    position: relative;
+    margin-top:100px;
+    padding: 30px;
+    clear: both;
+    transform: perspective(700px) rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.jo-social-media i{
+	padding:30px;
+	color:#fff;
+	background:#fff;
+	border-radius: 7px;
+	margin:10px;
+box-shadow: 20px 20px 50px 0 rgba(34,43,55,.4);
+transition: all 0.2s;
+}
+.jo-social-media i:hover{
+	margin-top:10px;
+	box-shadow: none;
 }
 #jo-footer{
 	position: relative;
 	width: 100%;
-	height: 400px;
-	background: #111;
+	background:#111;
+	color:#fff;
+	padding:80px 0;
+}
+.jo-footer-top{
+	font-size: 16px;
+}
+.jo-footer-top ul{
+	list-style: none;
+	margin-top:30px;
+}
+.jo-footer-top h4{
+	line-height: 1.5em;
+}
+.jo-footer-top ul li{
+	padding:10px 0;
+}
+.jo-footer-top ul li a{
+	text-decoration: none;
+	padding:20px 0;
+	color:rgba(255,255,255,0.9);
 }
 
 
@@ -647,6 +703,71 @@ background: #eee;
 .jo-mobile-menu{
 	display: none;
 }
+#jo-logo{
+	position: relative;
+	height: 110px;
+	width: 100px;
+	cursor:pointer;
+	margin: 0 auto 30px auto;
+}
+#jo-logo div{
+	position: absolute;
+}
+#jo-logo :first-child {
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: transparent;
+    border: 20px solid #fff;
+    animation: mulut 5s infinite;
+}
+#jo-logo div:nth-child(2) {
+    top: 9px;
+    background: #111;
+    width: 100px;
+    height: 50px;
+}
+#jo-logo div:nth-child(3) {
+    background: #2196f3;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    animation: kedip 5s infinite;
+}
+#jo-logo div:nth-child(4) {
+    top: 10px;
+    left: 60px;
+    background: #fff;
+    width: 40px;
+    height: 20px;
+}
+
+@keyframes kedip{
+	0%{
+		border-radius:0;
+		top:10px;
+		height:20px;
+	}
+	5%, 100% {
+		border-radius:50%;
+		top:0;
+		height: 40px;
+	}
+}
+@keyframes mulut{
+	0%, 79%{
+		background:transparent;
+	}
+	80%, 100%{
+		background:#fff;
+	}
+}
+
+/*===========
+ MEDIA SCREEN
+===========*/
+
 @media screen and (max-width: 1024px){
 	.jo-wrapper{
 		width:100%;
@@ -692,8 +813,44 @@ background: #eee;
 	.jo-bg-skill{
 		height:800px;
 	}
+	#jo-project{
+		height: 1000px;
+	}
+	.jo-bg-project{
+		height: 800px;
+	}
+	#left1.jo-btn-left, #right1.jo-btn-right, #left2.jo-btn-left, #right2.jo-btn-right {
+	    height: 200px;
+	}
+
+	#left1.jo-btn-left{
+		top: 275px;
+	}
+	#right1.jo-btn-right{
+		right: 0;
+		top: 275px;
+	}
+	#left2.jo-btn-left{
+		top: 525px;
+	}
+	#right2.jo-btn-right{
+		right: 0;
+		top: 525px;
+	}
+	.jo-project img {
+		height: 200px
+	}
+	.jo-project-wrapper{
+		height: 400px;
+	}
 }
 @media screen and (max-width: 425px){
+	#jo-header #jo-logo{
+		display: block;
+	}
+	#jo-header img{
+		visibility:hidden;
+	}
 	.jo-col3, .jo-col4, .jo-col6, .jo-col9, .jo-col12{
 		float: none;
 		width: 100%
@@ -759,25 +916,43 @@ background: #eee;
 	.jo-bg-skill{
 		height: 1500px;
 	}
-	.jo-project img {
-		height: 200px
-	}
-	.jo-project-wrapper{
-		height: 400px;
-	}
-	#jo-project{
-		height: 750px;
-	}
 	.jo-btn-left, .jo-btn-right{
 		width: 50px;
 	}
 	.jo-project-wrapper{
 		padding: 0 20px;
 	}
+
+	#jo-project{
+		height: 1050px;
+	}
+	.jo-bg-project{
+		height: 800px;
+	}
+	#left1.jo-btn-left{
+		top: 307px;
+	}
+	#right1.jo-btn-right{
+		right: 0;
+		top: 307px;
+	}
+	#left2.jo-btn-left{
+		top: 557px;
+	}
+	#right2.jo-btn-right{
+		right: 0;
+		top: 557px;
+	}
 	#jo-post{
 		height: 2500px;
 	}
 	.jo-bg-post :nth-child(2){
 		height: 100%;
+	}
+	#jo-footer .jo-col3{
+		margin:40px 0;	
+	}
+	.jo-footer-top ul{
+		margin-top:15px;
 	}
 }
