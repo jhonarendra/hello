@@ -19,7 +19,35 @@ $(document).ready(function(){
 	  }, 1000);
 	});
 
+	var currentScrollTop = 0;
 	$(window).scroll(function(){
+		var newScrollTop = $(window).scrollTop();
+
+		// if(c < currentScrollTop && a > b + b){
+		// 	console.log("hide");
+		// } else if(c > currentScrollTop && !(a <= b)) {
+		// 	console.log("show");
+		// }
+		// c = currentScrollTop;
+
+		// console.log("tadi "+currentScrollTop+" skrg "+newScrollTop);
+		if(currentScrollTop > newScrollTop){
+			// console.log("turun");
+			// $("#jo-nav").show();
+			$("#jo-nav").removeClass("animated slideOutUp");
+			$("#jo-nav").addClass("animated slideInDown");
+			// $("#jo-nav").addClass("BounceInDown");
+			// $("#jo-nav").slideDown();
+		} else {
+			// $("#jo-nav").slideUp();
+			// $("#jo-nav").removeClass("BounceInDown");
+			$("#jo-nav").removeClass("animated slideInDown");
+			$("#jo-nav").addClass("animated slideOutUp");
+			// console.log("naik");
+		}
+
+		currentScrollTop = newScrollTop;
+
 		$(".jo-show").each(function(i){
 			var offsetTop = $(this).offset().top;
 

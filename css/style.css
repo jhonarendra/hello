@@ -53,6 +53,14 @@ article, aside, footer, header, hgroup, main, nav, section{
 .jo-hide{
 	visibility: hidden;
 }
+#jo-nav{
+	position: fixed;
+	background:rgba(0,0,0,.9);
+	width: 100%;
+	z-index: 999;
+}
+
+
 #jo-hello{
 	position: relative;
 	height: 700px;
@@ -62,7 +70,8 @@ article, aside, footer, header, hgroup, main, nav, section{
 .jo-bg-head{
 	position: absolute;
 	width: 100%;
-	height: 600px;
+	top:-80px;
+	height: 700px;
 }
 .jo-bg-head :first-child, .jo-bg-head :nth-child(2), .jo-bg-head :nth-child(3), .jo-bg-head :nth-child(4){
 	position: absolute;
@@ -138,14 +147,13 @@ article, aside, footer, header, hgroup, main, nav, section{
 	width: 700px
 }
 #jo-header{
-	padding:40px 0;
+	padding: 30px 0 50px 0;
 }
 #jo-header #jo-logo{
 	transform: scale(.2);
 	position: absolute;
-	top: -45px;
+	top: -48px;
 	left: -40px;
-	display: none;
 }
 #jo-header #jo-logo div:nth-child(2) {
 	background: #000;
@@ -157,8 +165,10 @@ article, aside, footer, header, hgroup, main, nav, section{
 }
 .jo-header-inner img{
 	height: 18px;
+	padding-left:40px;
 }
 .jo-header-menu ul{
+	margin-top:5px;
 	list-style: none;
 	text-align: right;
 }
@@ -178,7 +188,7 @@ article, aside, footer, header, hgroup, main, nav, section{
 	color: #fff;
 	font-weight: normal;
 	line-height: 1.5em;
-	margin: 100px 0 0 0;
+	margin: 180px 0 0 0;
 }
 .jo-btn-area{
 	margin-top:50px;
@@ -781,7 +791,9 @@ background: #eee;
 	.content__container {
 		width:100%;
 	}
-
+	#jo-header {
+    	padding: 20px 0 40px 0;
+	}
 	.jo-mobile-menu{
 		display: block;
 	}
@@ -865,7 +877,6 @@ background: #eee;
 		height: 800px;
 	}
 	.jo-head-content h4{
-		margin-top: 50px;
 		text-align: center;
 	}
 	.content__container {
